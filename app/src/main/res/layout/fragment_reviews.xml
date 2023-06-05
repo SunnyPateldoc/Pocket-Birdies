@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ReviewsFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:text="4.0"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_35ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="0.01"
+            android:progressDrawable="@drawable/ratingbar_progress_b"
+            app:layout_constraintBottom_toTopOf="@id/text_title_average_rating"
+
+            app:layout_constraintStart_toEndOf="@id/text_rating"
+            app:layout_constraintTop_toTopOf="@id/text_rating"
+             />
+
+
+        <TextView
+            android:id="@+id/text_title_average_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/average_rating_title"
+            android:textColor="@color/white_shedo_text"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/text_rating"
+            app:layout_constraintEnd_toEndOf="@id/rating_bar"
+            app:layout_constraintStart_toStartOf="@id/rating_bar"
+            app:layout_constraintTop_toBottomOf="@id/rating_bar" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_rating"
+            tools:listitem="@layout/review_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

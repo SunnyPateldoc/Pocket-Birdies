@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ProfileFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_user_profile"
+            android:layout_width="@dimen/_103sdp"
+            android:layout_height="@dimen/_103sdp"
+            android:layout_marginHorizontal="@dimen/_98sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:src="@drawable/profile"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            style="@style/MyTextView_Arial"
+            android:text="Drew Lewis, 34"
+            android:textAlignment="center"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/img_user_profile"
+            app:layout_constraintStart_toStartOf="@id/img_user_profile"
+            app:layout_constraintTop_toBottomOf="@id/img_user_profile" />
+
+
+        <TextView
+            android:id="@+id/bt_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/text_backgound"
+            style="@style/MyTextView_Arial"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/edit_profile"
+            android:textAlignment="center"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_user_name"
+            app:layout_constraintStart_toStartOf="@id/text_user_name"
+            app:layout_constraintTop_toBottomOf="@id/text_user_name" />
+
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_27sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/profile_message"
+            android:textAlignment="center"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_edit_profile" />
+
+
+        <TextView
+            android:id="@+id/text_title_golf_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_26sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/golf_experience"
+            android:textAlignment="center"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/view_divider1"
+            app:layout_constraintStart_toStartOf="@id/text_message"
+            app:layout_constraintTop_toBottomOf="@id/text_message" />
+
+
+        <TextView
+            android:id="@+id/text_golf_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            style="@style/MyTextView_Arial"
+            android:text="N/A"
+            android:textAlignment="center"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_title_golf_experience"
+            app:layout_constraintStart_toStartOf="@id/text_title_golf_experience"
+            app:layout_constraintTop_toBottomOf="@id/text_title_golf_experience"
+            />
+
+
+        <View
+            android:id="@+id/view_divider1"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/black_divder"
+            android:layout_marginVertical="@dimen/_6sdp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="@id/text_golf_experience"
+            app:layout_constraintEnd_toStartOf="@id/text_title_golf_handicap"
+            app:layout_constraintStart_toEndOf="@id/text_title_golf_experience"
+            app:layout_constraintTop_toTopOf="@id/text_title_golf_experience" />
+
+        <TextView
+            android:id="@+id/text_title_golf_handicap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_26sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/golf_handicap"
+            android:textAlignment="center"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/view_divider2"
+            app:layout_constraintStart_toEndOf="@id/view_divider1"
+            app:layout_constraintTop_toTopOf="@id/text_title_golf_experience" />
+
+
+        <TextView
+            android:id="@+id/text_golf_handicap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            style="@style/MyTextView_Arial"
+            android:text="N/A"
+            android:textAlignment="center"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_title_golf_handicap"
+            app:layout_constraintStart_toStartOf="@id/text_title_golf_handicap"
+            app:layout_constraintTop_toBottomOf="@id/text_title_golf_handicap"
+            />
+
+
+        <View
+            android:id="@+id/view_divider2"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="@color/black_divder"
+            android:layout_marginVertical="@dimen/_6sdp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="@id/text_golf_handicap"
+            app:layout_constraintEnd_toStartOf="@id/text_title_home_course"
+            app:layout_constraintStart_toEndOf="@id/text_title_golf_handicap"
+            app:layout_constraintTop_toTopOf="@id/text_title_golf_handicap" />
+
+        <TextView
+            android:id="@+id/text_title_home_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_26sdp"
+            android:layout_marginEnd="@dimen/_9sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/home_course"
+            android:textAlignment="center"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_message"
+            app:layout_constraintStart_toEndOf="@id/view_divider2"
+            app:layout_constraintTop_toTopOf="@id/text_title_golf_handicap" />
+
+
+        <TextView
+            android:id="@+id/text_home_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            style="@style/MyTextView_Arial"
+            android:text="N/A"
+            android:textAlignment="center"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/text_title_home_course"
+            app:layout_constraintStart_toStartOf="@id/text_title_home_course"
+            app:layout_constraintTop_toBottomOf="@id/text_title_home_course"
+              />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

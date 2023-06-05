@@ -1,0 +1,66 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PocketBirdies" parent="Theme.MaterialComponents.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black_gray</item>
+
+        <!--        MyActionbar-->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+        <!--        Change StatusBar-->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!--        ActionMenuTextColor-->
+        <item name="actionMenuTextColor">@color/cream_100</item>
+        <item name="android:actionMenuTextColor">@color/cream_100</item>
+
+        <!--        BottomView-->
+        <item name="bottomAppBarStyle">@style/MyBottomNavigation</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorOnSecondary</item>
+
+    </style>
+
+    <style name="MyActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <item name="android:textColor">@color/black_title</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+        <item name="iconTint">@color/black</item>
+        <item name="background">@color/white</item>
+        <item name="titleTextStyle">@style/MyActionBar.TitleStyle</item>
+        <item name="android:titleTextStyle">@color/black_title</item>
+        <item name="actionOverflowButtonStyle">@style/MyActionBar.IconColor</item>
+
+
+    </style>
+
+    <style name="MyActionBar.TitleStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+
+        <item name="textFillColor">@color/black_title</item>
+        <item name="android:textColor">@color/black_title</item>
+
+    </style>
+
+    <style name="MyBottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundColor">@color/black</item>
+        <item name="iconifiedByDefault">false</item>
+    </style>
+
+    <style name="MyActionBar.IconColor" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/img_instructor"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toTopOf="@id/text_title_instructors_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_title_instructors_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyTextView_Arial"
+        android:text="Rick Shiels"
+        android:textAlignment="center"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/img_instructor"
+        app:layout_constraintStart_toStartOf="@id/img_instructor"
+        app:layout_constraintTop_toBottomOf="@id/img_instructor" />
+
+    <TextView
+        android:id="@+id/text_title_golf_club"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyTextView_Arial"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="@dimen/_6ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/img_instructor"
+        app:layout_constraintStart_toStartOf="@id/img_instructor"
+        app:layout_constraintTop_toBottomOf="@id/text_title_instructors_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

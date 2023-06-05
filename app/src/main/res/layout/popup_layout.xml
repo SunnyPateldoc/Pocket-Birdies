@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_180sdp"
+        android:layout_marginEnd="@dimen/_23sdp"
+        android:elevation="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/popup_background">
+
+
+        <TextView
+            android:id="@+id/text_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Report"
+            app:layout_constrainedWidth="true"
+            style="@style/MyTextView_Arial"
+            android:textColor="@color/white_shedo_text"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/green_white_shedo"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_report"
+            app:layout_constraintStart_toStartOf="@id/text_report"
+            app:layout_constraintTop_toBottomOf="@id/text_report" />
+
+        <TextView
+            android:id="@+id/text_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Block"
+            style="@style/MyTextView_Arial"
+            android:textColor="@color/white_shedo_text"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/view_divider"
+            app:layout_constraintStart_toStartOf="@id/view_divider"
+            app:layout_constraintTop_toTopOf="@id/view_divider"
+
+            />
+
+        <View
+            android:id="@+id/view_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:background="@color/green_white_shedo"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_block"
+            app:layout_constraintStart_toStartOf="@id/text_block"
+            app:layout_constraintTop_toBottomOf="@id/text_block" />
+
+        <TextView
+            android:id="@+id/text_remove_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Remove chat"
+            style="@style/MyTextView_Arial"
+            android:textColor="@color/rad"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:paddingEnd="@dimen/_8sdp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/view_divider2"
+            app:layout_constraintStart_toStartOf="@id/view_divider2"
+            app:layout_constraintTop_toTopOf="@id/view_divider2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_6sdp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

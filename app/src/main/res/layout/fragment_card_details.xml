@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CardDetailsFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_tile_name_on_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/name_on_card"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_name_on_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/backgound_5"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:textSize="@dimen/_11ssp"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="Sunny Patel"
+            android:textColor="@color/black_dark_text_name"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_name_on_card"
+            app:layout_constraintStart_toStartOf="@id/text_tile_name_on_card"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_name_on_card" />
+
+        <TextView
+            android:id="@+id/text_tile_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/card_number"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/edt_name_on_card"
+            app:layout_constraintStart_toStartOf="@id/edt_name_on_card"
+            app:layout_constraintTop_toBottomOf="@id/edt_name_on_card" />
+
+        <EditText
+            android:id="@+id/edt_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/backgound_5"
+            android:inputType="number"
+            android:maxLength="14"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:textSize="@dimen/_11ssp"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="12345678901112"
+            android:textColor="@color/black_dark_text_name"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_card_number"
+            app:layout_constraintStart_toStartOf="@id/text_tile_card_number"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_card_number" />
+
+
+        <TextView
+            android:id="@+id/text_tile_expiration_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/expiration_date"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/edt_card_number"
+            app:layout_constraintStart_toStartOf="@id/edt_card_number"
+            app:layout_constraintTop_toBottomOf="@id/edt_card_number" />
+
+        <EditText
+            android:id="@+id/edt_expiration_mont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/backgound_5"
+            android:inputType="number"
+            android:maxLength="2"
+            android:drawableEnd="@drawable/arrow_down"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:textSize="@dimen/_11ssp"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="1234"
+            android:layout_marginEnd="@dimen/_9sdp"
+            android:textColor="@color/black_dark_text_name"
+            app:layout_constrainedWidth="true"
+
+            app:layout_constraintEnd_toStartOf="@id/edt_expiration_year"
+            app:layout_constraintStart_toStartOf="@id/text_tile_expiration_date"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_expiration_date" />
+
+        <EditText
+            android:id="@+id/edt_expiration_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgound_5"
+            android:inputType="number"
+            android:drawableEnd="@drawable/arrow_down"
+            android:maxLength="4"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_77sdp"
+            android:textSize="@dimen/_11ssp"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="1234"
+
+            android:textColor="@color/black_dark_text_name"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_expiration_date"
+            app:layout_constraintStart_toEndOf="@id/edt_expiration_mont"
+            app:layout_constraintTop_toTopOf="@id/edt_expiration_mont" />
+
+
+
+        <TextView
+            android:id="@+id/text_tile_cvc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_18sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/cvc"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/edt_expiration_year"
+            app:layout_constraintStart_toStartOf="@id/edt_expiration_year"
+            app:layout_constraintTop_toBottomOf="@id/edt_expiration_year" />
+
+        <EditText
+            android:id="@+id/edt_cvc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/backgound_5"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:textSize="@dimen/_11ssp"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="12345678901112"
+            android:textColor="@color/black_dark_text_name"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_cvc"
+            app:layout_constraintStart_toStartOf="@id/text_tile_cvc"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_cvc" />
+
+
+        <TextView
+            android:id="@+id/bt_use_this_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:background="@drawable/bt_backgound_black"
+            style="@style/MyTextView_Arial"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="@string/use_this_card"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/edt_cvc"
+            app:layout_constraintStart_toStartOf="@id/edt_cvc"
+            app:layout_constraintTop_toBottomOf="@id/edt_cvc"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

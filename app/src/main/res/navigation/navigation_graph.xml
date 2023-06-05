@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/item_home">
+
+    <fragment
+        android:id="@+id/emailAddressFragment"
+        android:name="com.example.pocketbirdies.fragment.EmailAddressFragment"
+        android:label="Email Address"
+        tools:layout="@layout/fragment_email_address" />
+    <fragment
+        android:id="@+id/updatePasswordFragment"
+        android:name="com.example.pocketbirdies.fragment.UpdatePasswordFragment"
+        android:label="Password"
+        tools:layout="@layout/fragment_update_password" />
+    <fragment
+        android:id="@+id/my_account"
+        android:name="com.example.pocketbirdies.fragment.MyAccountFragment"
+        android:label="My account"
+        tools:layout="@layout/fragment_my_account">
+        <action
+            android:id="@+id/action_my_account_to_emailAddressFragment"
+            app:destination="@id/emailAddressFragment" />
+        <action
+            android:id="@+id/action_my_account_to_updatePasswordFragment"
+            app:destination="@id/updatePasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/item_bell"
+        android:name="com.example.pocketbirdies.fragment.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/notification_settings"
+        android:name="com.example.pocketbirdies.fragment.NotificationsSettingsFragment"
+        android:label="Notification Settings"
+        tools:layout="@layout/fragment_notifications_settings" />
+    <fragment
+        android:id="@+id/privacy_policy"
+        android:name="com.example.pocketbirdies.fragment.PrivacyPolicyFragment"
+        android:label="Privacy Policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/about_us"
+        android:name="com.example.pocketbirdies.fragment.AboutUsFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/terms_of_use"
+        android:name="com.example.pocketbirdies.fragment.TermsConditionsFragment"
+        android:label="Terms Of Use"
+        tools:layout="@layout/fragment_terms_conditions" />
+    <fragment
+        android:id="@+id/contact_us"
+        android:name="com.example.pocketbirdies.fragment.ContactUsFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact_us" />
+
+    <navigation android:id="@+id/item_home"
+        app:startDestination="@id/home">
+        <fragment
+            android:id="@+id/home"
+            android:name="com.example.pocketbirdies.fragment.HomeFragment"
+            android:label="Welcome Back!"
+            tools:layout="@layout/fragment_home">
+            <action
+                android:id="@+id/action_item_home_to_find_lesson"
+                app:destination="@id/find_lesson" />
+            <action
+                android:id="@+id/action_item_home_to_coming_soon"
+                app:destination="@id/coming_soon" />
+
+            <deepLink android:id="@+id/home_fragment"
+                app:uri="navapp://home/home"/>
+
+            <action
+                android:id="@+id/action_home_to_chat_message"
+                app:destination="@id/chatFragment"
+                />
+
+        </fragment>
+        <fragment
+            android:id="@+id/find_lesson"
+            android:name="com.example.pocketbirdies.fragment.FindLessonFragment"
+            android:label="Instructors"
+            tools:layout="@layout/fragment_find_lesson">
+            <action
+                android:id="@+id/action_find_lesson_to_dialogFragment"
+                app:destination="@id/dialogFragment" />
+            <action
+                android:id="@+id/action_find_lesson_to_filterFragment"
+                app:destination="@id/filterFragment" />
+
+            <deepLink android:id="@+id/find_lesson_fragment"
+                app:uri="navapp://find_lesson/find_lesson"/>
+            <argument
+                android:name="findInstrocter"
+                app:argType="com.example.pocketbirdies.model.ModelInstructors" />
+
+        </fragment>
+        <fragment
+            android:id="@+id/coming_soon"
+            android:name="com.example.pocketbirdies.fragment.ComingSoonFragment"
+            android:label="At Home Programs"
+            tools:layout="@layout/fragment_coming_soon" >
+
+            <deepLink android:id="@+id/coming_soon"
+                app:uri="navapp://coming_soon/coming_soon"/>
+
+        </fragment>
+        <dialog
+            android:id="@+id/dialogFragment"
+            android:name="com.example.pocketbirdies.fragment.DialogFragment"
+            android:label="Instructors"
+            tools:layout="@layout/fragment_dialog">
+            <action
+                android:id="@+id/action_dialogFragment_to_reviewsFragment"
+                app:destination="@id/reviewsFragment" />
+            <action
+                android:id="@+id/action_dialogFragment_to_lessonFragment"
+                app:destination="@id/lessonFragment" />
+            <action
+                android:id="@+id/action_dialogFragment_to_itemHome"
+                app:destination="@id/item_home"
+                app:popUpTo="@id/item_home"
+                app:popUpToInclusive="true"
+                />
+            <argument
+                android:name="dialogInstroctor"
+                app:argType="com.example.pocketbirdies.model.ModelInstructors" />
+        </dialog>
+        <fragment
+            android:id="@+id/reviewsFragment"
+            android:name="com.example.pocketbirdies.fragment.ReviewsFragment"
+            android:label="Reviews"
+            tools:layout="@layout/fragment_reviews">
+            <action
+                android:id="@+id/action_reviewsFragment_to_addReviewFragment"
+                app:destination="@id/addReviewFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/addReviewFragment"
+            android:name="com.example.pocketbirdies.fragment.AddReviewFragment"
+            android:label="Add Review"
+            tools:layout="@layout/fragment_add_review" />
+        <fragment
+            android:id="@+id/filterFragment"
+            android:name="com.example.pocketbirdies.fragment.FilterFragment"
+            android:label="Filter"
+            tools:layout="@layout/fragment_filter" />
+        <fragment
+            android:id="@+id/lessonFragment"
+            android:name="com.example.pocketbirdies.fragment.LessonFragment"
+            android:label="Lessons"
+            tools:layout="@layout/fragment_lesson">
+            <action
+                android:id="@+id/action_lessonFragment_to_reviewDetailsFragment"
+                app:destination="@id/reviewDetailsFragment" />
+            <argument
+                android:name="lessonInstroctor"
+                app:argType="com.example.pocketbirdies.model.ModelInstructors" />
+        </fragment>
+        <fragment
+            android:id="@+id/reviewDetailsFragment"
+            android:name="com.example.pocketbirdies.fragment.ReviewDetailsFragment"
+            android:label="Review Details"
+            tools:layout="@layout/fragment_review_details">
+            <action
+                android:id="@+id/action_reviewDetailsFragment_to_cardDetailsFragment"
+                app:destination="@id/cardDetailsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/cardDetailsFragment"
+            android:name="com.example.pocketbirdies.fragment.CardDetailsFragment"
+            android:label="Card Details"
+            tools:layout="@layout/fragment_card_details">
+            <action
+                android:id="@+id/action_cardDetailsFragment_to_paymentFragment"
+                app:destination="@id/paymentFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/paymentFragment"
+            android:name="com.example.pocketbirdies.fragment.PaymentFragment"
+            android:label="Payment"
+            tools:layout="@layout/fragment_payment" />
+        <action
+            android:id="@+id/action_item_home_to_item_message"
+            app:destination="@id/item_massages" />
+        <action android:id="@+id/action_global_find_lesson" app:destination="@id/find_lesson" />
+    </navigation>
+
+    <navigation android:id="@+id/item_profile"
+        app:startDestination="@id/profile">
+        <fragment
+            android:id="@+id/profile"
+            android:name="com.example.pocketbirdies.fragment.ProfileFragment"
+            android:label="Profile"
+            tools:layout="@layout/fragment_profile">
+            <action
+                android:id="@+id/action_item_profile_to_editProfileFragment"
+                app:destination="@id/editProfileFragment" />
+            <deepLink android:id="@+id/profile_fragment"
+                app:uri="navapp://profile/profile"/>
+        </fragment>
+        <fragment
+            android:id="@+id/editProfileFragment"
+            android:name="com.example.pocketbirdies.fragment.EditProfileFragment"
+            android:label="Edit profile"
+            tools:layout="@layout/fragment_edit_profile" />
+    </navigation>
+
+    <navigation android:id="@+id/item_nearme"
+        app:startDestination="@id/nearme">
+        <fragment
+            android:id="@+id/nearme"
+            android:name="com.example.pocketbirdies.fragment.NearMeFragment"
+            android:label="Near Me"
+            tools:layout="@layout/fragment_near_me">
+            <action
+                android:id="@+id/action_item_nearme_to_nearMeDialogFragment"
+                app:destination="@id/nearMeDialogFragment" />
+
+            <deepLink android:id="@+id/nearme_fragment"
+                app:uri="navapp://nearme/nearme"/>
+        </fragment>
+        <dialog
+            android:id="@+id/nearMeDialogFragment"
+            android:name="com.example.pocketbirdies.fragment.NearMeDialogFragment"
+            android:label="Near Me"
+            tools:layout="@layout/fragment_near_me_dialog">
+            <action
+                android:id="@+id/action_nearMeDialogFragment_to_find_lesson"
+                app:destination="@id/find_lesson"
+                app:popUpTo="@id/item_nearme"
+                app:popUpToInclusive="true"/>
+        </dialog>
+        <action
+            android:id="@+id/action_global_item_home"
+            app:destination="@id/item_home" />
+    </navigation>
+
+
+    <navigation android:id="@+id/item_schedule"
+        app:startDestination="@id/schedule">
+        <fragment
+            android:id="@+id/schedule"
+            android:name="com.example.pocketbirdies.fragment.ScheduleFragment"
+            android:label="Schedule"
+            tools:layout="@layout/fragment_schedule">
+            <action
+                android:id="@+id/action_item_schedule_to_upcomingDetailsFragment"
+                app:destination="@id/upcomingDetailsFragment" />
+            <action
+                android:id="@+id/action_item_schedule_to_completedDetailsFragment"
+                app:destination="@id/completedDetailsFragment" />
+
+            <deepLink android:id="@+id/schedule_fragment"
+                app:uri="navapp://schedule/schedule"/>
+
+        </fragment>
+        <fragment
+            android:id="@+id/upcomingFragment"
+            android:name="com.example.pocketbirdies.fragment.UpcomingFragment"
+            android:label="fragment_upcoming"
+            tools:layout="@layout/fragment_upcoming">
+            <action
+                android:id="@+id/action_upcomingFragment_to_upcomingDetailsFragment"
+                app:destination="@id/upcomingDetailsFragment"
+                app:popUpTo="@id/item_schedule"
+                app:popUpToInclusive="true"
+                />
+        </fragment>
+        <fragment
+            android:id="@+id/completedFragment"
+            android:name="com.example.pocketbirdies.fragment.CompletedFragment"
+            android:label="fragment_completed"
+            tools:layout="@layout/fragment_completed">
+            <action
+                android:id="@+id/action_completedFragment_to_completedDetailsFragment"
+                app:destination="@id/completedDetailsFragment"
+                app:popUpTo="@id/item_schedule"
+                app:popUpToInclusive="true"
+                />
+        </fragment>
+        <fragment
+            android:id="@+id/upcomingDetailsFragment"
+            android:name="com.example.pocketbirdies.fragment.UpcomingDetailsFragment"
+            android:label="Booking Details"
+            tools:layout="@layout/fragment_upcoming_details" />
+        <fragment
+            android:id="@+id/completedDetailsFragment"
+            android:name="com.example.pocketbirdies.fragment.CompletedDetailsFragment"
+            android:label="Booking Details"
+            tools:layout="@layout/fragment_completed_details" />
+        <fragment
+            android:id="@+id/pendingFragment"
+            android:name="com.example.pocketbirdies.fragment.PendingFragment"
+            android:label="fragment_pending"
+            tools:layout="@layout/fragment_pending" />
+    </navigation>
+
+
+    <navigation android:id="@+id/item_massages"
+        app:startDestination="@id/massages">
+        <fragment
+            android:id="@+id/massages"
+            android:name="com.example.pocketbirdies.fragment.MessagesFragment"
+            android:label="Messages"
+            tools:layout="@layout/fragment_messages">
+            <action
+                android:id="@+id/action_item_massages_to_newMessageFragment"
+                app:destination="@id/newMessageFragment" />
+            <action
+                android:id="@+id/action_item_massages_to_chatFragment"
+                app:destination="@id/chatFragment" />
+
+            <deepLink android:id="@+id/message_fragment"
+                app:uri="navapp://message/message"/>
+        </fragment>
+        <fragment
+            android:id="@+id/newMessageFragment"
+            android:name="com.example.pocketbirdies.fragment.NewMessageFragment"
+            android:label="New Message"
+            tools:layout="@layout/fragment_new_message">
+            <action
+                android:id="@+id/action_newMessageFragment_to_chatFragment"
+                app:destination="@id/chatFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/chatFragment"
+            android:name="com.example.pocketbirdies.fragment.ChatFragment"
+            android:label="Chat"
+            tools:layout="@layout/fragment_chat">
+            <action
+                android:id="@+id/action_chatFragment_to_reportDialog"
+                app:destination="@id/dialog" />
+            <action
+                android:id="@+id/action_chatFragment_to_blockDialog"
+                app:destination="@id/blockDialog" />
+            <action
+                android:id="@+id/action_chatFragment_to_removeChatDialog"
+                app:destination="@id/removeChatDialog" />
+
+            <deepLink android:id="@+id/chat_fragment"
+                app:uri="navapp://message/chate"/>
+            <argument
+                android:name="chatInstrocter"
+                app:argType="com.example.pocketbirdies.model.ModelInstructors" />
+        </fragment>
+        <dialog
+            android:id="@+id/blockDialog"
+            android:name="com.example.pocketbirdies.fragment.BlockDialog"
+            android:label="fragment_block_dialog"
+            tools:layout="@layout/fragment_block_dialog" />
+
+        <dialog
+            android:id="@+id/removeChatDialog"
+            android:name="com.example.pocketbirdies.fragment.RemoveChatDialog"
+            android:label="fragment_remove_chat_dialog"
+            tools:layout="@layout/fragment_remove_chat_dialog" />
+
+        <navigation android:id="@+id/dialog"
+            app:startDestination="@id/reportDialog">
+            <dialog
+                android:id="@+id/reportDialog"
+                android:name="com.example.pocketbirdies.fragment.ReportDialog"
+                android:label="fragment_report_dialog"
+                tools:layout="@layout/fragment_report_dialog">
+                <action
+                    android:id="@+id/action_reportDialog_to_notifyDialog"
+                    app:destination="@id/notifyDialog" />
+                <action
+                    android:id="@+id/action_reportDialog_to_otherDialog"
+                    app:destination="@id/otherDialog" />
+
+                <deepLink android:id="@+id/reportDialog"
+                    app:uri="navapp://report/report"/>
+
+            </dialog>
+            <dialog
+                android:id="@+id/otherDialog"
+                android:name="com.example.pocketbirdies.fragment.OtherDialog"
+                android:label="fragment_other_dialog"
+                tools:layout="@layout/fragment_other_dialog">
+                <action
+                    android:id="@+id/action_otherDialog_to_reportDialog"
+                    app:destination="@id/reportDialog" />
+                <action
+                    android:id="@+id/action_otherDialog_to_notifyDialog"
+                    app:destination="@id/notifyDialog" />
+            </dialog>
+            <dialog
+                android:id="@+id/notifyDialog"
+                android:name="com.example.pocketbirdies.fragment.NotifyDialog"
+                android:label="fragment_notify_dialog"
+                tools:layout="@layout/fragment_notify_dialog" />
+        </navigation><action android:id="@+id/action_global_chatFragment" app:destination="@id/chatFragment"/>
+    </navigation>
+</navigation>

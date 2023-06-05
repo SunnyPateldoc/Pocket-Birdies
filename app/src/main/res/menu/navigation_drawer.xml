@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+
+    <item
+        android:id="@+id/my_account"
+        android:title="My Account" />
+
+
+    <item
+        android:id="@+id/notification_settings"
+        android:title="Notification Settings" />
+
+    <item
+        android:id="@+id/about_us"
+        android:title="About Us" />
+
+
+    <item
+        android:id="@+id/privacy_policy"
+        android:title="Privacy Policy" />
+
+    <item
+        android:id="@+id/terms_of_use"
+        android:title="Terms Of Use" />
+
+    <item
+        android:id="@+id/at_home_program"
+        android:title="At Home Program" />
+    <item
+        android:id="@+id/contact_us"
+        android:title="Contact Us" />
+
+    <item
+        android:id="@+id/deactivate_account"
+        android:title="Deactivate Account" />
+
+    <item
+        android:id="@+id/delete_account"
+        android:title="Delete Account" />
+
+
+</menu>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/scroll_view"
+    android:layout_height="match_parent"
+    android:background="@color/black_gray"
+    tools:context=".activity.Verification">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            app:layout_constrainedWidth="true"
+            android:src="@drawable/arrow"
+            app:layout_constraintEnd_toStartOf="@id/image_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="@dimen/_202sdp"
+            android:layout_height="@dimen/_84sdp"
+            android:layout_marginHorizontal="@dimen/_36sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:src="@drawable/pocketbirdies_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_title_verification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            style="@style/MyTextView_Arial"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/verification"
+            android:textColor="@color/white_78"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/image_logo"
+            app:layout_constraintStart_toStartOf="@id/image_logo"
+            app:layout_constraintTop_toBottomOf="@id/image_logo" />
+
+        <TextView
+            android:id="@+id/text_verification_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/verification_message"
+            android:textColor="@color/white_75"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/text_title_verification"
+            app:layout_constraintStart_toStartOf="@id/text_title_verification"
+            app:layout_constraintTop_toBottomOf="@id/text_title_verification" />
+
+
+        <TextView
+            android:id="@+id/text_title_enter_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/cream_90"
+            style="@style/MyTextView_Arial"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:text="@string/enter_the_4_digit_code"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_verification_message"
+            app:layout_constraintStart_toStartOf="@id/text_verification_message"
+            app:layout_constraintTop_toBottomOf="@id/text_verification_message" />
+
+        <EditText
+            android:id="@+id/edt_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/edt_background_with_bottom_lin"
+            style="@style/MyEditText_Arial"
+            android:inputType="number"
+            android:maxLength="4"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_11sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            app:layout_constrainedWidth="true"
+            android:textColorHint="@color/white_15"
+            app:layout_constraintEnd_toEndOf="@id/text_title_enter_code"
+            app:layout_constraintStart_toStartOf="@id/text_title_enter_code"
+            app:layout_constraintTop_toBottomOf="@id/text_title_enter_code" />
+
+
+        <TextView
+            android:id="@+id/bt_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_31sdp"
+            android:background="@drawable/bt_background"
+            style="@style/MyTextView_Arial_rounded"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_23sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/btverify"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            android:layout_marginBottom="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/edt_code"
+            app:layout_constraintStart_toStartOf="@id/edt_code"
+            app:layout_constraintTop_toBottomOf="@id/edt_code" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

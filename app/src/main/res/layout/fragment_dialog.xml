@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.DialogFragment"
+    android:layout_width="match_parent"
+    android:background="@drawable/bottom_sheet_background"
+    style="@style/CustomBottomSheetDialog"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_instructor_profile"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginStart="@dimen/_31sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:src="@drawable/profile"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+
+        <TextView
+            android:id="@+id/text_title_instructors_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/todd_anderson"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_instructor_profile"
+            app:layout_constraintTop_toTopOf="@id/img_instructor_profile" />
+
+        <ImageView
+            android:id="@+id/img_twitter_logo"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/twitter_logo"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="@id/text_title_instructors_name"
+            app:layout_constraintTop_toBottomOf="@id/text_title_instructors_name"
+             />
+
+
+        <TextView
+            android:id="@+id/text_title_twitter_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/toddandersontpc"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_title_instructors_name"
+            app:layout_constraintStart_toEndOf="@id/img_twitter_logo"
+            app:layout_constraintTop_toTopOf="@id/img_twitter_logo" />
+
+
+        <TextView
+            android:id="@+id/text_instructors_disc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/instructors_disc"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_instructor_profile"
+              />
+
+        <TextView
+            android:id="@+id/text_instructors_fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/hourly_rate"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_instructors_disc"
+            app:layout_constraintStart_toStartOf="@id/text_instructors_disc"
+            app:layout_constraintTop_toBottomOf="@id/text_instructors_disc"
+            />
+
+        <TextView
+            android:id="@+id/text_instructors_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/instructor_link"
+            android:textColor="@color/blue_link"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_instructors_fees"
+            app:layout_constraintStart_toStartOf="@id/text_instructors_fees"
+            app:layout_constraintTop_toBottomOf="@id/text_instructors_fees" />
+
+
+        <TextView
+            android:id="@+id/text_title_schedule_today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_112sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_112sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/schedule_today"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_instructors_link" />
+
+
+        <ImageView
+            android:id="@+id/img_golf_icon"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:src="@drawable/golficon"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_lessons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_title_schedule_today"
+            />
+
+
+        <TextView
+            android:id="@+id/text_lessons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:background="@drawable/text_backgound"
+            style="@style/MyTextView_Arial"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/lessons"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/img_chat_icon"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toEndOf="@id/img_golf_icon"
+            app:layout_constraintTop_toTopOf="@id/img_golf_icon"
+            />
+
+
+        <ImageView
+            android:id="@+id/img_chat_icon"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:src="@drawable/chat_icon"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_message"
+            app:layout_constraintStart_toEndOf="@id/text_lessons"
+            app:layout_constraintTop_toTopOf="@id/text_lessons" />
+
+
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:layout_marginEnd="@dimen/_29sdp"
+            android:background="@drawable/text_backgound"
+            style="@style/MyTextView_Arial"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/message"
+            android:textAlignment="center"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_chat_icon"
+            app:layout_constraintTop_toTopOf="@id/img_chat_icon" />
+
+
+        <ImageView
+            android:id="@+id/img_material_star"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:src="@drawable/icon_material_star"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_average_rating"
+            app:layout_constraintStart_toStartOf="@id/img_golf_icon"
+            app:layout_constraintTop_toBottomOf="@id/img_golf_icon"
+            />
+
+
+        <TextView
+            android:id="@+id/text_average_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_11sdp"
+            android:layout_marginEnd="@dimen/_29sdp"
+            android:background="@drawable/text_backgound"
+            style="@style/MyTextView_Arial"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="@string/average_rating"
+            android:textAlignment="center"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_9ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_material_star"
+            app:layout_constraintTop_toTopOf="@id/img_material_star"
+            />
+
+        <ImageView
+            android:id="@+id/img_users_1"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_23sdp"
+            android:src="@drawable/profile"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/img_golf_icon"
+            app:layout_constraintTop_toBottomOf="@id/img_material_star" />
+
+        <ImageView
+            android:id="@+id/img_users_2"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/profile"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/img_users_1"
+
+            app:layout_constraintStart_toStartOf="@id/img_users_1"
+            app:layout_constraintTop_toTopOf="@id/img_users_1"
+            />
+
+        <ImageView
+            android:id="@+id/img_users_3"
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="@dimen/_23sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/profile"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/img_users_2"
+            app:layout_constraintStart_toStartOf="@id/img_users_2"
+            app:layout_constraintTop_toTopOf="@id/img_users_2" />
+
+        <TextView
+            android:id="@+id/text_registered_users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/_23_registered_users"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/img_users_1"
+            app:layout_constraintEnd_toEndOf="@id/text_instructors_fees"
+            app:layout_constraintStart_toEndOf="@id/img_users_3"
+            app:layout_constraintTop_toTopOf="@id/img_users_1"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

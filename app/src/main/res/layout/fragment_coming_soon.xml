@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ComingSoonFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_setimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:background="@drawable/golf_at_home_for"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_title_first_at_home_on_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_28sdp"
+                android:layout_marginTop="7dp"
+                style="@style/MyTextView_Arial"
+                android:text="COMING SOON"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_title_message_on_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_125sdp"
+                android:layout_marginTop="@dimen/_29sdp"
+                android:text="Lessons on your schedule!"
+                android:textColor="@color/cream_100"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/text_title_first_at_home_on_img"
+                app:layout_constraintStart_toStartOf="@id/text_title_first_at_home_on_img"
+                app:layout_constraintTop_toBottomOf="@id/text_title_first_at_home_on_img" />
+
+            <TextView
+                android:id="@+id/text_title_message_b_on_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                style="@style/MyTextView_Arial"
+                android:text="Schedule a virtual 1-on-1 lesson, or simply explore our catalog of at home tips and drills!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/text_title_message_on_img"
+                app:layout_constraintStart_toStartOf="@id/text_title_message_on_img"
+                app:layout_constraintTop_toBottomOf="@id/text_title_message_on_img" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/text_title_messsage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_23sdp"
+            style="@style/MyTextView_Arial"
+            android:text="Improve your game!"
+            android:textAlignment="center"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/constraint_layout_setimage"
+            app:layout_constraintStart_toStartOf="@id/constraint_layout_setimage"
+            app:layout_constraintTop_toBottomOf="@id/constraint_layout_setimage" />
+
+
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_34sdp"
+            android:layout_marginTop="@dimen/_23sdp"
+            style="@style/MyTextView_Arial"
+            android:text="Looking to fix your swing? Explore countless videos from expert coaches to find the perfect fit for your game."
+            android:textAlignment="center"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/text_title_messsage"
+            app:layout_constraintStart_toStartOf="@id/text_title_messsage"
+            app:layout_constraintTop_toBottomOf="@id/text_title_messsage" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/quick_tutorials_layout"
+            tools:itemCount="10"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/text_title_messsage"
+            app:layout_constraintStart_toStartOf="@id/text_title_messsage"
+            app:layout_constraintTop_toBottomOf="@id/text_message" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

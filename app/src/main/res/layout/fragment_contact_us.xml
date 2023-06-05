@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ContactUsFragment">
+
+
+
+
+    <TextView
+        android:id="@+id/text_title_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        style="@style/MyTextView_Arial"
+        android:text="Full Name"
+        android:textColor="@color/black_white_shedo"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/edit_backgound_5"
+        style="@style/MyEditText_Arial"
+        android:inputType="textPersonName"
+        android:paddingVertical="@dimen/_11sdp"
+        android:paddingStart="@dimen/_19sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:textColor="@color/black_dark_text_name"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_title_full_name"
+        app:layout_constraintStart_toStartOf="@id/text_title_full_name"
+        app:layout_constraintTop_toBottomOf="@id/text_title_full_name" />
+
+
+    <TextView
+        android:id="@+id/text_title_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="Email Address"
+        android:textColor="@color/black_white_shedo"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/edt_full_name"
+        app:layout_constraintStart_toStartOf="@id/edt_full_name"
+        app:layout_constraintTop_toBottomOf="@id/edt_full_name" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/edit_backgound_5"
+        style="@style/MyEditText_Arial"
+        android:inputType="textEmailAddress"
+        android:paddingVertical="@dimen/_11sdp"
+        android:paddingStart="@dimen/_19sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:textColor="@color/black_dark_text_name"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_title_email"
+        app:layout_constraintStart_toStartOf="@id/text_title_email"
+        app:layout_constraintTop_toBottomOf="@id/text_title_email" />
+
+
+    <TextView
+        android:id="@+id/text_title_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="Message"
+        android:textColor="@color/black_white_shedo"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/edt_email"
+        app:layout_constraintStart_toStartOf="@id/edt_email"
+        app:layout_constraintTop_toBottomOf="@id/edt_email" />
+
+    <EditText
+        android:id="@+id/edt_message"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_137sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/edit_backgound_5"
+        style="@style/MyEditText_Arial"
+        android:inputType="textMultiLine"
+        android:paddingVertical="@dimen/_2sdp"
+        android:paddingStart="@dimen/_2sdp"
+        android:gravity="top"
+        android:paddingEnd="@dimen/_15sdp"
+        android:textColor="@color/black_dark_text_name"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_title_message"
+        app:layout_constraintStart_toStartOf="@id/text_title_message"
+        app:layout_constraintTop_toBottomOf="@id/text_title_message" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

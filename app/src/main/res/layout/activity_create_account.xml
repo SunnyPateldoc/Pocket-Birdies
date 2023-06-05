@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_gray"
+    tools:context=".activity.CreateAccount">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_36sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:src="@drawable/pocketbirdies_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_create_account_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MyTextView_Arial"
+            android:text="@string/create_account_message"
+            android:textColor="@color/white_75"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/image_logo"
+            app:layout_constraintStart_toStartOf="@id/image_logo"
+            app:layout_constraintTop_toBottomOf="@id/image_logo" />
+
+
+
+        <TextView
+            android:id="@+id/bt_golfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/bt_background_outline"
+            style="@style/MyTextView_Arial_rounded"
+            android:gravity="center"
+
+            android:layout_marginStart="@dimen/_38sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:paddingHorizontal="@dimen/_31sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/btgolfer"
+            android:textAllCaps="false"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_title_or"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_create_account_message" />
+
+
+
+        <TextView
+            android:id="@+id/text_title_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            style="@style/MyTextView_Arial"
+            android:text="or"
+            android:textColor="@color/white_75"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/bt_golfer"
+            app:layout_constraintEnd_toStartOf="@id/bt_coach"
+            app:layout_constraintStart_toEndOf="@id/bt_golfer"
+            app:layout_constraintTop_toTopOf="@id/bt_golfer" />
+
+
+
+        <TextView
+            android:id="@+id/bt_coach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/bt_background_outline"
+            style="@style/MyTextView_Arial_rounded"
+            android:gravity="center"
+
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_38sdp"
+            android:paddingHorizontal="@dimen/_31sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/btcoach"
+            android:textAllCaps="false"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/text_title_or"
+            app:layout_constraintTop_toBottomOf="@id/text_create_account_message" />
+
+
+        <TextView
+            android:id="@+id/bt_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:background="@drawable/bt_background"
+            style="@style/MyTextView_Arial_rounded"
+            android:layout_marginHorizontal="@dimen/_65sdp"
+            android:visibility="gone"
+            android:paddingHorizontal="@dimen/_33sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="@string/create_account"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_golfer" />
+
+
+        <TextView
+            android:id="@+id/text_loging_go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_99sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/login_goto"
+            android:textSize="@dimen/_10ssp"
+            android:textAlignment="center"
+            app:layout_constrainedWidth="true"
+            android:layout_marginBottom="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_create_account" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

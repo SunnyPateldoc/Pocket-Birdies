@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FilterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_preferred_hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/preferred_hour_s"
+        android:textColor="@color/cream_90"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/spinner_background"
+        android:paddingVertical="@dimen/_7sdp"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingEnd="@dimen/_17sdp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_preferred_hour"
+        app:layout_constraintStart_toStartOf="@id/text_preferred_hour"
+        app:layout_constraintTop_toBottomOf="@id/text_preferred_hour" />
+
+
+    <TextView
+        android:id="@+id/text_title_preferred_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/preferred_date"
+        android:textColor="@color/cream_90"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_278sdp"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/text_backgound"
+        app:layout_constraintEnd_toEndOf="@id/text_title_preferred_date"
+        app:layout_constraintStart_toStartOf="@id/text_title_preferred_date"
+        app:layout_constraintTop_toBottomOf="@id/text_title_preferred_date"
+         >
+
+        <TextView
+            android:id="@+id/text_month_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_23sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/helvetica_neue"
+            android:text="April 2022"
+            android:textColor="@color/cream_90"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/img_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_arrow_back"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/text_month_year"
+            app:layout_constraintEnd_toStartOf="@id/img_next"
+            app:layout_constraintStart_toEndOf="@id/text_month_year"
+            app:layout_constraintTop_toTopOf="@id/text_month_year"
+              />
+
+        <ImageView
+            android:id="@+id/img_next"
+            android:layout_width="13dp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/icon_arrow_forward"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/text_month_year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_back"
+            app:layout_constraintTop_toTopOf="@id/text_month_year"
+            />
+
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            android:id="@+id/calender_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:isScrollContainer="false"
+            android:saveEnabled="true"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            app:compactCalendarBackgroundColor="@android:color/transparent"
+            app:compactCalendarCurrentDayBackgroundColor="@android:color/transparent"
+            app:compactCalendarCurrentDayTextColor="@color/black"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="@color/cream_100"
+            app:compactCalendarCurrentSelectedDayTextColor="@color/black"
+            app:compactCalendarDisplayOtherMonthDays="true"
+            app:compactCalendarEventIndicatorStyle="small_indicator"
+            app:compactCalendarOtherMonthDaysTextColor="@color/white_shedo_text"
+            app:compactCalendarShouldSelectFirstDayOfMonthOnScroll="true"
+            app:compactCalendarTextColor="@color/white_shedo_text"
+            app:compactCalendarTextSize="@dimen/_11ssp"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/img_next"
+            app:layout_constraintStart_toStartOf="@id/text_month_year"
+            app:layout_constraintTop_toBottomOf="@id/text_month_year" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_title_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/radius"
+        android:textColor="@color/cream_90"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/constraint_layout"
+        app:layout_constraintStart_toStartOf="@id/constraint_layout"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout" />
+
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_slider_radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:values="@array/radius_values"
+        app:layout_constrainedWidth="true"
+        app:thumbColor="@color/cream_100"
+        app:thumbRadius="@dimen/_11sdp"
+        app:trackColorActive="@color/cream_100"
+        app:trackColorInactive="@color/white_shedo"
+        android:valueFrom="0.0"
+        android:valueTo="15.0"
+        app:layout_constraintEnd_toEndOf="@id/text_title_radius"
+        app:layout_constraintStart_toStartOf="@id/text_title_radius"
+        app:layout_constraintTop_toBottomOf="@id/text_title_radius" />
+
+
+
+    <TextView
+        android:id="@+id/text_title_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/price"
+        android:textColor="@color/cream_90"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/text_title_radius"
+        app:layout_constraintStart_toStartOf="@id/text_title_radius"
+        app:layout_constraintTop_toBottomOf="@id/range_slider_radius" />
+
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_slider_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:values="@array/price_values"
+        app:layout_constrainedWidth="true"
+        app:thumbColor="@color/cream_100"
+        app:thumbRadius="@dimen/_11sdp"
+        app:tickRadiusActive="@dimen/_11ssp"
+        app:tickRadiusInactive="@dimen/_11ssp"
+        app:trackColorActive="@color/cream_100"
+        app:trackColorInactive="@color/white_shedo"
+        android:valueFrom="20.0"
+        android:valueTo="200.0"
+        app:layout_constraintEnd_toEndOf="@id/text_title_price"
+        app:layout_constraintStart_toStartOf="@id/text_title_price"
+        app:layout_constraintTop_toBottomOf="@id/text_title_price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

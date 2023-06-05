@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="@dimen/_29sdp"
+        android:layout_height="@dimen/_29sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:src="@drawable/pocketbirdies_logo_circle"
+        android:layout_marginBottom="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        style="@style/MyTextView_Arial"
+        android:textColor="@color/cream_100"
+        android:textStyle="bold"
+        android:text="Booking confirmed!"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/img_option"
+        app:layout_constraintStart_toEndOf="@id/img_profile"
+        app:layout_constraintTop_toTopOf="@id/img_profile" />
+
+
+    <ImageView
+        android:id="@+id/img_option"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:src="@drawable/baseline_more_horiz_24"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/text_title"
+        app:layout_constraintTop_toTopOf="@id/text_title" />
+
+
+    <TextView
+        android:id="@+id/text_mesage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyTextView_Arial"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:textColor="@color/black_dark_text_name"
+        android:text="You've successfully booked to Blake Jirges' lesson."
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/text_time"
+        app:layout_constraintStart_toStartOf="@id/text_title"
+        app:layout_constraintTop_toBottomOf="@id/text_title" />
+
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyTextView_Arial"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:textColor="@color/cream_100"
+        android:text="View now"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/text_time"
+        app:layout_constraintStart_toStartOf="@id/text_title"
+        app:layout_constraintTop_toBottomOf="@id/text_mesage" />
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyTextView_Arial"
+        android:textColor="@color/black_dark_text_name"
+        android:text="3d"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="@id/img_profile"
+        app:layout_constraintEnd_toEndOf="@id/img_option"
+        app:layout_constraintStart_toEndOf="@id/text_mesage"
+        app:layout_constraintTop_toTopOf="@id/text_mesage" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/green_white_shedo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

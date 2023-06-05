@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    tools:context=".fragment.RemoveChatDialog">
+
+
+    <TextView
+        android:id="@+id/text_title_remove_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        style="@style/MyTextView_Arial"
+        android:gravity="center"
+        android:text="Remove Chat"
+        android:textColor="@color/cream_100"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_31sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:gravity="center"
+        android:text="You will no longer have access to your previous conversation."
+        android:textColor="@color/black_title"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title_remove_chat" />
+
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:background="@color/green_white_shedo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_message" />
+
+
+    <TextView
+        android:id="@+id/text_cencle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="Cencle"
+        android:textColor="@color/black_title"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_divider2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+    <View
+        android:id="@+id/view_divider2"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="match_parent"
+        android:background="@color/green_white_shedo"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/text_yes"
+        app:layout_constraintStart_toEndOf="@id/text_cencle"
+        app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+
+    <TextView
+        android:id="@+id/text_yes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_9sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="Yes"
+        android:textColor="@color/cream_100"
+        android:textSize="@dimen/_11ssp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_divider2"
+        app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

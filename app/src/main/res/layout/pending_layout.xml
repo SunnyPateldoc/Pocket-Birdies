@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/text_center_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        style="@style/MyTextView_Arial"
+        android:text="McCormick Ranch Golf Club"
+        android:textColor="@color/cream_100"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/bt_pay_now"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/bt_pay_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bt_backgound_black"
+        style="@style/MyTextView_Arial"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="@string/pay_now"
+        android:paddingHorizontal="@dimen/_23sdp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_center_name"
+        />
+
+    <TextView
+        android:id="@+id/text_date_and_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        style="@style/MyTextView_Arial"
+        android:gravity="start|center"
+        android:text="Thu, April 28 - 10:00 AM - 11:00 AM"
+        android:textColor="@color/black_text_name"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_center_name"
+        app:layout_constraintStart_toStartOf="@id/text_center_name"
+        app:layout_constraintTop_toBottomOf="@id/text_center_name" />
+
+
+    <TextView
+        android:id="@+id/text_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        style="@style/MyTextView_Arial"
+        android:gravity="start|center"
+        android:text="@string/hourly_rate_30_00"
+        android:textColor="@color/black_text_name"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_date_and_time"
+        app:layout_constraintStart_toStartOf="@id/text_date_and_time"
+        app:layout_constraintTop_toBottomOf="@id/text_date_and_time" />
+
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="@dimen/_23sdp"
+        android:layout_height="@dimen/_23sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/profile"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/text_rate"
+        app:layout_constraintTop_toBottomOf="@id/text_rate" />
+
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_11sdp"
+        style="@style/MyTextView_Arial"
+        android:gravity="start|center"
+        android:text="@string/blake_jirges"
+        android:textColor="@color/black_text_name"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_rate"
+        app:layout_constraintStart_toEndOf="@id/img_profile"
+        app:layout_constraintTop_toTopOf="@id/img_profile" />
+
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:background="@color/black_shedo"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/bt_pay_now"
+        app:layout_constraintStart_toStartOf="@id/img_profile"
+        app:layout_constraintTop_toBottomOf="@id/img_profile" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

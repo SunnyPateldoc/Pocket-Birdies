@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_find_a_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_139sdp"
+            android:src="@drawable/find_a_lesson"
+            app:layout_constrainedWidth="true"
+
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+        <ImageView
+            android:id="@+id/img_chat_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_139sdp"
+            android:layout_marginTop="@dimen/_minus31sdp"
+            android:src="@drawable/chat_banner"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/img_find_a_lesson" />
+
+
+        <TextView
+            android:id="@+id/text_title_nearby_instructors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/nearby_instructors"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/img_chat_banner" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_near_me"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_196sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constrainedHeight="true"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toTopOf="@id/text_title_coming_soon"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/text_title_nearby_instructors"
+            tools:itemCount="9"
+            tools:listitem="@layout/nearby_instructors_layout" />
+
+
+        <TextView
+            android:id="@+id/text_title_coming_soon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/coming_soon"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_near_me" />
+
+        <ImageView
+            android:id="@+id/img_at_home_program_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_139sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:src="@drawable/at_home_program_banner"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/text_title_coming_soon" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_37sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_37sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/_1sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/_15sdp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

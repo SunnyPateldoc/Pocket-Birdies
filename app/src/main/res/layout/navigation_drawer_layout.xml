@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_name">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_logout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_name">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/black_name"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            app:headerLayout="@layout/navigation_drawer_header"
+            app:itemBackground="@drawable/navi_drawer_item_backgound"
+            app:itemTextColor="@color/white_85"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/navigation_drawer" />
+
+
+        <ImageView
+            android:id="@+id/img_logout"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_196sdp"
+            android:layout_marginBottom="@dimen/_28sdp"
+            android:src="@drawable/signout"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/text_title_logout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nav_view"
+            />
+
+        <TextView
+            android:id="@+id/text_title_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_91sdp"
+            android:fontFamily="@font/arial"
+            android:text="@string/sign_out"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/img_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_logout"
+            app:layout_constraintTop_toTopOf="@id/img_logout" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PaymentFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/text_tile_payment_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/payment_method"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_tile_card_typ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_9sdp"
+            style="@style/MyTextView_Arial"
+            android:text="VISA"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_card_number"
+            app:layout_constraintStart_toStartOf="@id/text_tile_payment_method"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_payment_method" />
+
+        <TextView
+            android:id="@+id/text_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            style="@style/MyTextView_Arial"
+            android:text="*** *** *** 1112"
+            android:textColor="@color/black_text_name_b"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/bt_change"
+            app:layout_constraintStart_toEndOf="@id/text_tile_card_typ"
+            app:layout_constraintTop_toTopOf="@id/text_tile_card_typ"
+              />
+
+        <TextView
+            android:id="@+id/bt_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/bt_backgound_black"
+            style="@style/MyTextView_Arial"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="Change"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_payment_method"
+            app:layout_constraintStart_toEndOf="@id/text_card_number"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_payment_method" />
+
+
+        <TextView
+            android:id="@+id/text_expir_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            style="@style/MyTextView_Arial"
+            android:text="Exp: 12/2025"
+            android:textColor="@color/black_text_name_b"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_card_number"
+            app:layout_constraintStart_toStartOf="@id/text_card_number"
+            app:layout_constraintTop_toBottomOf="@id/text_card_number"
+            />
+
+
+        <TextView
+            android:id="@+id/text_name_on_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            style="@style/MyTextView_Arial"
+            android:text="John Doe"
+            android:textColor="@color/black_text_name_b"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_expir_date"
+            app:layout_constraintStart_toStartOf="@id/text_expir_date"
+            app:layout_constraintTop_toBottomOf="@id/text_expir_date"
+            />
+
+
+        <TextView
+            android:id="@+id/text_tile_promo_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/promo_code"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_payment_method"
+            app:layout_constraintStart_toStartOf="@id/text_tile_payment_method"
+            app:layout_constraintTop_toBottomOf="@id/text_name_on_card" />
+
+
+        <EditText
+            android:id="@+id/edt_promo_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/backgound_5"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="PBCHECKOUT"
+            android:textColor="@color/black_dark_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_promo_code"
+            app:layout_constraintStart_toStartOf="@id/text_tile_promo_code"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_promo_code" />
+
+
+        <TextView
+            android:id="@+id/text_promo_code_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            style="@style/MyTextView_Arial"
+            android:text="*Invalid promocode"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="italic"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/edt_promo_code"
+            app:layout_constraintStart_toStartOf="@id/edt_promo_code"
+            app:layout_constraintTop_toBottomOf="@id/edt_promo_code" />
+
+
+        <TextView
+            android:id="@+id/text_tile_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_21sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/amount"
+            android:textColor="@color/cream_100"
+            android:textSize="@dimen/_9ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_promo_code_message"
+            app:layout_constraintStart_toStartOf="@id/text_promo_code_message"
+            app:layout_constraintTop_toBottomOf="@id/text_promo_code_message" />
+
+
+        <TextView
+            android:id="@+id/text_title_sub_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/sub_total"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_sub_total"
+            app:layout_constraintStart_toStartOf="@id/text_tile_amount"
+            app:layout_constraintTop_toBottomOf="@id/text_tile_amount"
+            />
+
+        <TextView
+            android:id="@+id/text_sub_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MyTextView_Arial"
+            android:text="$37.50 USD"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_tile_amount"
+            app:layout_constraintStart_toEndOf="@id/text_title_sub_total"
+            app:layout_constraintTop_toTopOf="@id/text_title_sub_total"
+            />
+
+
+        <TextView
+            android:id="@+id/text_title_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/discount"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_discount"
+            app:layout_constraintStart_toStartOf="@id/text_title_sub_total"
+            app:layout_constraintTop_toBottomOf="@id/text_title_sub_total"
+            />
+
+        <TextView
+            android:id="@+id/text_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MyTextView_Arial"
+            android:text="- $1.50 USD"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_sub_total"
+            app:layout_constraintStart_toEndOf="@id/text_title_discount"
+            app:layout_constraintTop_toTopOf="@id/text_title_discount"
+            />
+
+
+        <TextView
+            android:id="@+id/text_title_taxes_fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/taxes_fees"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_taxes_fees"
+            app:layout_constraintStart_toStartOf="@id/text_title_discount"
+            app:layout_constraintTop_toBottomOf="@id/text_title_discount"
+            />
+
+        <TextView
+            android:id="@+id/text_taxes_fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MyTextView_Arial"
+            android:text="$6.00 USD"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_discount"
+            app:layout_constraintStart_toEndOf="@id/text_title_taxes_fees"
+            app:layout_constraintTop_toTopOf="@id/text_title_taxes_fees"
+              />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:background="@color/green_white_shedo"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/text_taxes_fees"
+            app:layout_constraintStart_toStartOf="@id/text_title_taxes_fees"
+            app:layout_constraintTop_toBottomOf="@id/text_title_taxes_fees" />
+
+        <TextView
+            android:id="@+id/text_title_total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            style="@style/MyTextView_Arial"
+            android:text="@string/total_amount"
+            android:textColor="@color/black_text_name"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/text_total_amount"
+            app:layout_constraintStart_toStartOf="@id/view_divider"
+            app:layout_constraintTop_toBottomOf="@id/view_divider"
+              />
+
+        <TextView
+            android:id="@+id/text_total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/MyTextView_Arial"
+            android:text="$45.00 USD"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black_name"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@id/view_divider"
+            app:layout_constraintStart_toEndOf="@id/text_title_total_amount"
+            app:layout_constraintTop_toTopOf="@id/text_title_total_amount"
+            />
+
+
+        <TextView
+            android:id="@+id/bt_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_38sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bt_backgound_black_25"
+            style="@style/MyTextView_Arial"
+            android:paddingVertical="@dimen/_11sdp"
+            android:text="@string/pay_45_00_usd"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/text_total_amount"
+            app:layout_constraintStart_toStartOf="@id/text_title_total_amount"
+            app:layout_constraintTop_toBottomOf="@id/text_title_total_amount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

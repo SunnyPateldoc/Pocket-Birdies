@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="@dimen/_39sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/text_title_cancel_booking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:text="@string/cancel_booking"
+                android:textAlignment="center"
+                android:textColor="@color/rad"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:text="@string/cancel_booking_message"
+                android:textAlignment="center"
+                android:textColor="@color/black_text_name"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="@id/text_title_cancel_booking"
+                app:layout_constraintStart_toStartOf="@id/text_title_cancel_booking"
+                app:layout_constraintTop_toBottomOf="@id/text_title_cancel_booking" />
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/black_shedo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_message" />
+
+
+            <TextView
+                android:id="@+id/bt_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10ssp"
+                style="@style/MyTextView_Arial"
+                android:text="No"
+                android:textAlignment="center"
+                android:textColor="@color/black_text_name"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/view_divider1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+            <View
+                android:id="@+id/view_divider1"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/black_shedo"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bt_yes"
+                app:layout_constraintStart_toEndOf="@id/bt_no"
+                app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+            <TextView
+                android:id="@+id/bt_yes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyTextView_Arial"
+                android:text="Yes"
+                android:textAlignment="center"
+                android:textColor="@color/rad"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="bold"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/bt_no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_divider1"
+                app:layout_constraintTop_toTopOf="@id/bt_no" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

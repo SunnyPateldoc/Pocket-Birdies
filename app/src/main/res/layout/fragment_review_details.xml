@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ReviewDetailsFragment">
+
+    <TextView
+        android:id="@+id/text_title_instructor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/instructor"
+        android:textColor="@color/black_text_name"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/profile"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/text_title_instructor"
+        app:layout_constraintTop_toBottomOf="@id/text_title_instructor"
+          />
+
+
+    <TextView
+        android:id="@+id/text_instructors_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/blake_jirges"
+        android:textColor="@color/black_name"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/text_title_view_profile"
+        app:layout_constraintEnd_toStartOf="@id/bt_book_now"
+        app:layout_constraintStart_toEndOf="@id/img_profile"
+        app:layout_constraintTop_toTopOf="@id/img_profile" />
+
+    <TextView
+        android:id="@+id/bt_book_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/bt_backgound_black"
+        style="@style/MyTextView_Arial"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_3sdp"
+        android:text="@string/book_now"
+        android:textColor="@color/white"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/text_instructors_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_instructors_name"
+        app:layout_constraintTop_toTopOf="@id/text_instructors_name"
+         />
+
+
+    <TextView
+        android:id="@+id/text_title_view_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/view_profile"
+        android:textColor="@color/cream_100"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/img_profile"
+        app:layout_constraintEnd_toEndOf="@id/text_instructors_name"
+        app:layout_constraintStart_toStartOf="@id/text_instructors_name"
+        app:layout_constraintTop_toBottomOf="@id/text_instructors_name" />
+
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/black_shedo"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/bt_book_now"
+        app:layout_constraintStart_toStartOf="@id/img_profile"
+        app:layout_constraintTop_toBottomOf="@id/img_profile" />
+
+    <TextView
+        android:id="@+id/text_title_booking_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/booking_details"
+        android:textColor="@color/black_text_name"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="@id/view_divider"
+        app:layout_constraintStart_toStartOf="@id/view_divider"
+        app:layout_constraintTop_toBottomOf="@id/view_divider" />
+
+
+
+    <ImageView
+        android:id="@+id/img_ic_pin"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/icon_ionic_ios_pin"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/text_title_instructor"
+        app:layout_constraintTop_toBottomOf="@id/text_title_booking_details"
+          />
+
+
+    <TextView
+        android:id="@+id/text_instructors_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/mccormick_ranch_golf_club"
+        android:textColor="@color/black_name"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_title_booking_details"
+        app:layout_constraintStart_toEndOf="@id/img_ic_pin"
+        app:layout_constraintTop_toTopOf="@id/img_ic_pin" />
+
+
+    <ImageView
+        android:id="@+id/img_ic_calendar"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/icon_awesome_calendar_alt"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/img_ic_pin"
+        app:layout_constraintTop_toBottomOf="@id/img_ic_pin"
+          />
+
+
+    <TextView
+        android:id="@+id/text_booking_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/mon_april_2_2022"
+        android:textColor="@color/black_name"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_instructors_address"
+        app:layout_constraintStart_toEndOf="@id/img_ic_calendar"
+        app:layout_constraintTop_toTopOf="@id/img_ic_calendar" />
+
+
+
+    <ImageView
+        android:id="@+id/img_ic_clock"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/icon_awesome_clock"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/img_ic_calendar"
+        app:layout_constraintTop_toBottomOf="@id/img_ic_calendar"
+          />
+
+
+    <TextView
+        android:id="@+id/text_booking_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/_8_00_am_9_00_am"
+        android:textColor="@color/black_name"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_booking_date"
+        app:layout_constraintStart_toEndOf="@id/img_ic_clock"
+        app:layout_constraintTop_toTopOf="@id/img_ic_clock" />
+
+
+
+    <ImageView
+        android:id="@+id/img_ic_money"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:src="@drawable/icon_metro_money"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/img_ic_clock"
+        app:layout_constraintTop_toBottomOf="@id/img_ic_clock"
+        />
+
+
+    <TextView
+        android:id="@+id/text_booking_fees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        style="@style/MyTextView_Arial"
+        android:text="@string/_30_00"
+        android:textColor="@color/black_name"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/text_booking_time"
+        app:layout_constraintStart_toEndOf="@id/img_ic_money"
+        app:layout_constraintTop_toTopOf="@id/img_ic_money" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

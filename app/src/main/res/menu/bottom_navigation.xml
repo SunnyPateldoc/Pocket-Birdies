@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_home"
+        android:title="Home"
+        android:icon="@drawable/home_focuse"/>
+
+    <item
+        android:id="@+id/item_profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_focuse"/>
+
+    <item
+        android:id="@+id/item_nearme"
+        android:title="Near Me"
+        android:icon="@drawable/nearme_focuse"/>
+
+    <item
+        android:id="@+id/item_schedule"
+        android:title="Schedule"
+        android:icon="@drawable/schedule_focuse"/>
+
+    <item
+        android:id="@+id/item_massages"
+        android:title="Messages"
+        android:icon="@drawable/message_focuses"/>
+
+
+</menu>
